@@ -1,6 +1,8 @@
-# my DSA learning record
-## 自我介紹~  
-05135902 王舒荑 心理四 演算法之學習記錄
+# My DSA learning record
+## 自我介紹~    
+姓名：王舒荑    
+學號：05135902    
+系級：心理四  
 
 ## [week1](https://github.com/wangshuti/DSA/tree/master/week1)
 [Linkedlist_707](https://github.com/wangshuti/DSA/blob/master/week1/Linkedlist_707.py)    
