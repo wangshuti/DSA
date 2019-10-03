@@ -19,5 +19,7 @@
 -leetcode no.232: implement of queue and stack,上課所用queue leetcode      
 [課堂筆記](https://github.com/wangshuti/DSA/blob/master/week2/課堂筆記.txt)    
 -上課筆記記錄    
-[stack_code](https://github.com/wangshuti/DSA/blob/master/week2/stack_code.py)
--網絡搜尋之stack的基礎code
+[stack_code](https://github.com/wangshuti/DSA/blob/master/week2/stack_code.py)     
+-網絡搜尋之stack的基礎code      
+[queue_code](https://github.com/wangshuti/DSA/blob/master/week2/queue_code.py)     
+-網絡搜尋之queue的基礎code     
