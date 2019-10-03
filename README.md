@@ -8,7 +8,7 @@
 [Linkedlist_707](https://github.com/wangshuti/DSA/blob/master/week1/Linkedlist_707.py)    
 -leetcode no.707：上課所用的leetcode    
 [Linkedlist_note](https://github.com/wangshuti/DSA/blob/master/week1/Linkedlist_note.py)   
--上網搜尋關於Linkedlist的解釋      
+-網絡搜尋之關於Linkedlist的解釋      
 [Linkedlist_206](https://github.com/wangshuti/DSA/blob/master/week1/Linkedlist_206.py)    
 -leetcode no.206：課後Leetcode練習：reverse of Linkedlist    
 
@@ -19,3 +19,5 @@
 -leetcode no.232: implement of queue and stack,上課所用queue leetcode      
 [課堂筆記](https://github.com/wangshuti/DSA/blob/master/week2/課堂筆記.txt)    
 -上課筆記記錄    
+[stack_code](https://github.com/wangshuti/DSA/blob/master/week2/stack_code.py)
+-網絡搜尋之stack的基礎code
