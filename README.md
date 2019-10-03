@@ -17,5 +17,5 @@
 -leetcode no.155:min stack，上課所用stack leetcode   
 [stack&queue_232](https://github.com/wangshuti/DSA/blob/master/week2/stack%26queue_232.py)   
 -leetcode no.232: implement of queue and stack,上課所用queue leetcode      
-[課堂筆記](https://github.com/wangshuti/DSA/blob/master/week2/課堂筆記.py)    
+[課堂筆記](https://github.com/wangshuti/DSA/blob/master/week2/課堂筆記.txt)    
 -上課筆記記錄    
