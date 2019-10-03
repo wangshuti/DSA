@@ -1,0 +1,13 @@
+stack 碟盤子 ：
+進來 push ，出去 pop，回傳最上面的 top（現在最上面是什麼），確認是否有資料 IsEmpty，確認資料個數 getSize
+最先進來的最後出去
+網頁運用：把每一步記錄在stack。在存的時候就有提出來是上一個的概念。
+解迷宮問題：不需要用到learning，撞壁就pop，沒有就一直push。
+
+queue 列隊概念
+不想linked list 可以從中間插入，不能插入
+一次只能出來一件事，印表機。沒有排到的工作就放在queue
+有排成的需求就要用到queue
+放進後面queue：push
+把最前民的移除：pop
+getFront 回傳Front所指向資料，getBack 回傳Back所指向資料
