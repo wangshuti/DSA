@@ -1,4 +1,5 @@
-# DSA
+# my DSA learning record
+## 自我介紹~  
 05135902 王舒荑 心理四 演算法之學習記錄
 
 ## [week1](https://github.com/wangshuti/DSA/tree/master/week1)
