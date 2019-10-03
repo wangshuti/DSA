@@ -12,4 +12,6 @@
 -上網搜尋關於Linkedlist的解釋  
    
 [Linkedlist_206](https://github.com/wangshuti/DSA/blob/master/week1/Linkedlist_206.py)  
--課後Leetcode練習：reverse of Linkedlist
+-課後Leetcode練習：reverse of Linkedlist   
+
+## [week2](https://github.com/wangshuti/DSA/tree/master/week2)
