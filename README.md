@@ -5,7 +5,7 @@
 系級：心理四  
 
 ## [week2](https://github.com/wangshuti/DSA/tree/master/week2)     
-### Definiton:      
+### Linkedlist           
 Linked list(連結串列)是一種常見的資料結構，其使用node(節點)來記錄、表示、儲存資料(data)，並利用每個node中的pointer指向下一個node，藉此將多個node串連起來，形成Linked list，並以NULL來代表Linked list的終點      
 -[補充資料](http://alrightchiu.github.io/SecondRound/linked-list-introjian-jie.html)        
       
@@ -17,12 +17,10 @@ Linked list(連結串列)是一種常見的資料結構，其使用node(節點)�
 -leetcode no.206：課後Leetcode練習：reverse of Linkedlist    
 
 ## [week3](https://github.com/wangshuti/DSA/tree/master/week2)     
-### 1.stack      
-Definiton:    
+### 1.stack       
 Stack是具有「Last-In-First-Out」的資料結構(可以想像成一種裝資料的容器)，「最晚進入Stack」的資料會「最先被取出」，「最早進入Stack」的資料則「最晚被取出」。        
 -[補充資料-以array與linkedlist實作](http://alrightchiu.github.io/SecondRound/stack-yi-arrayyu-linked-listshi-zuo.html)          
-### 2.queue         
-Definion:        
+### 2.queue                
 Queue(佇列)是一種概念性的抽象資料結構，可以分別使用Linked list(連結串列)與Array(陣列)來實作。           
 -[補充資料-以linkedlist實作](http://alrightchiu.github.io/SecondRound/queue-introjian-jie-bing-yi-linked-listshi-zuo.html)       
 -[補充資料-以array實作](http://alrightchiu.github.io/SecondRound/queue-yi-arrayshi-zuo-queue.html)      
