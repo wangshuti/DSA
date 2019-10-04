@@ -6,9 +6,9 @@
 
 ## [week2](https://github.com/wangshuti/DSA/tree/master/week2)     
 ### Definiton:      
-Linked list(連結串列)是一種常見的資料結構，其使用node(節點)來記錄、表示、儲存資料(data)，並利用每個node中的pointer指向下一個node，藉此將多個node串連起來，形成Linked list，並以NULL來代表Linked list的終點 
+Linked list(連結串列)是一種常見的資料結構，其使用node(節點)來記錄、表示、儲存資料(data)，並利用每個node中的pointer指向下一個node，藉此將多個node串連起來，形成Linked list，並以NULL來代表Linked list的終點      
 -[補充資料](http://alrightchiu.github.io/SecondRound/linked-list-introjian-jie.html)        
-### code
+      
 [Linkedlist_707](https://github.com/wangshuti/DSA/blob/master/week2/Linkedlist_707.py)    
 -leetcode no.707：上課所用的leetcode    
 [Linkedlist_note](https://github.com/wangshuti/DSA/blob/master/week2/Linkedlist_note.py)   
@@ -26,7 +26,7 @@ Definion:
 Queue(佇列)是一種概念性的抽象資料結構，可以分別使用Linked list(連結串列)與Array(陣列)來實作。           
 -[補充資料-以linkedlist實作](http://alrightchiu.github.io/SecondRound/queue-introjian-jie-bing-yi-linked-listshi-zuo.html)       
 -[補充資料-以array實作](http://alrightchiu.github.io/SecondRound/queue-yi-arrayshi-zuo-queue.html)      
-### code
+      
 [stack&queue_155](https://github.com/wangshuti/DSA/blob/master/week3/stack%26queue_155.py)      
 -leetcode no.155:min stack，上課所用stack leetcode   
 [stack&queue_232](https://github.com/wangshuti/DSA/blob/master/week3/stack%26queue_232.py)   
