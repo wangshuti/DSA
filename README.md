@@ -59,3 +59,5 @@ Quick Sort是一種「把大問題分成小問題處理」的Divide and Conquer�
           
 [quick sort_code](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort_code.py)    
 -quick sort 基礎實作code，運用額外空間法       
+[quick sort_code(2)](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort_code(2).py)        
+-quick sort 方法二：in place法         
