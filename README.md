@@ -57,5 +57,5 @@ Quick Sort是一種「把大問題分成小問題處理」的Divide and Conquer�
            
 ![image](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort.png)          
           
-[quick sort_code](https://github.com/wangshuti/DSA/blob/master/week5/quick sort_code)    
+[quick sort_code](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort_code.py)    
 -quick sort 基礎實作code，運用額外空間法       
