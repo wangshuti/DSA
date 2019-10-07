@@ -42,4 +42,9 @@ Insertion sort是一種簡單直觀的排序演算法。它的工作原理是通
 -[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-insertion-sortcha-ru-pai-xu-fa.html)     
 
 [Insertion sort_147](https://github.com/wangshuti/DSA/blob/master/week4/Insertion%20sort_147.py)         
--leetcode no.147: Insertion Sort List, 上課所用Insertion Sort leetcode        
+-leetcode no.147: Insertion Sort List, 上課所用Insertion Sort leetcode       
+[Insetion sort_code](https://github.com/wangshuti/DSA/blob/master/week4/Insertion%20sort_code.py)
+-Insertion sort 基礎實作code      
+
+## week5      
+### Quick sort     
