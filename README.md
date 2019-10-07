@@ -35,3 +35,8 @@ Queue(佇列)是一種概念性的抽象資料結構，可以分別使用Linked 
 -網絡搜尋之stack的基礎code      
 [queue_code](https://github.com/wangshuti/DSA/blob/master/week3/queue_code.py)     
 -網絡搜尋之queue的基礎code     
+
+## week4
+### Insertion sort      
+Insertion sort是一種簡單直觀的排序演算法。它的工作原理是通過構建有序序列，對於未排序資料，在已排序序列中從後向前掃描，找到相應位置並插入。       
+[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-insertion-sortcha-ru-pai-xu-fa.html)      
