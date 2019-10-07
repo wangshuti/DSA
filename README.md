@@ -48,9 +48,14 @@ Insertion sort是一種簡單直觀的排序演算法。它的工作原理是通
 [Insetion sort_code](https://github.com/wangshuti/DSA/blob/master/week4/Insertion%20sort_code.py)         
 -Insertion sort 基礎實作code      
 
-## week5      
+## [week5](https://github.com/wangshuti/DSA/tree/master/week5)      
 ### Quick sort    
 Quick Sort是一種「把大問題分成小問題處理」的Divide and Conquer方法，概念如下：         
 在數列中任意挑選一個數，稱為pivot，然後調整數列，使得「所有在pivot左邊的數，都比pivot還小」，而「在pivot右邊的數都比pivot大」。        
 接著，將所有在pivot左邊的數視為「新的數列」，所有在pivot右邊的數視為「另一個新的數列」，「分別」重複上述步驟(選pivot、調整數列)，直到分不出「新的數列」為止。        
--[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html)      
+-[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html)     
+           
+![image](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort.png)          
+          
+[quick sort_code](https://github.com/wangshuti/DSA/blob/master/week5/quick sort_code)    
+-quick sort 基礎實作code，運用額外空間法       
