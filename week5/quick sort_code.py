@@ -1,6 +1,6 @@
 >>> def quick_sort(list):
-	min=[]
-	max=[]
+	small=[]
+	big=[]
 	keylist=[]
 	if len(list) <= 1:
 		return list
@@ -8,14 +8,14 @@
 		key = list[0]
 		for i in list:
 			if i < key:
-				min.append(i)
+				small.append(i)
 			elif i > key:
-				max.append(i)
+				big.append(i)
 			else:
 				keylist.append(i)
-	min = quick_sort(min)
-	max = quick_sort(max)
-	return min+keylist+max
+	small = quick_sort(small)
+	big = quick_sort(big)
+	return small+keylist+big
 
 >>> mylist = [3,24,13,2,4,56,74,54,15]
 >>> quick_sort(mylist)
