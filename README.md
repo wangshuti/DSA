@@ -65,5 +65,5 @@ Quick Sort是一種「把大問題分成小問題處理」的Divide and Conquer�
 ### 第一次作業
 [流程圖](https://github.com/wangshuti/DSA/blob/master/week5/quick_sort流程圖.jpg)         
 -使用draw io畫出來的流程圖，在最後結尾的地方仍存在不妥，正努力解決               
-[作業實作](https://nbviewer.jupyter.org/github/wangshuti/DSA/blob/master/week5/HW_quicksort.ipynb)        
+[作業實作](https://nbviewer.jupyter.org/github/wangshuti/DSA/blob/master/week5/HW1.ipynb)        
 -老師要求作業之jupyter notebook格式，因github經常loading不出來，所以放的網頁模式！                         
