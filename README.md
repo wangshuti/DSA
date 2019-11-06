@@ -67,3 +67,19 @@ Quick Sort是一種「把大問題分成小問題處理」的Divide and Conquer�
 -使用draw io畫出來的流程圖，在最後結尾的地方仍存在不妥，正努力解決               
 [作業實作](https://nbviewer.jupyter.org/github/wangshuti/DSA/blob/master/week5/HW_quicksort.ipynb)        
 -老師要求作業之jupyter notebook格式，因github經常loading不出來，所以放的網頁模式！                         
+
+## week6        
+### heap sort         
+Binary Heap有兩項基本特徵：       
+特徵一：Binary Heap之結構可以視作Complete Binary Tree。         
+特徵二：若將位於index(i)之node視為subtree之root，那麼，可將此Binary Heap分為兩類：          
+Max Heap：在每一個subtree中，root之「數值」要比兩個child之「數值」還要大         
+Min Heap：在每一個subtree中，root之「數值」要比兩個child之「數值」還要小       
+[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-heap-sortdui-ji-pai-xu-fa.html)       
+
+## week7
+### merge sort
+Merge Sort屬於Divide and Conquer演算法，把問題先拆解(divide)成子問題，並在逐一處理子問題後，將子問題的結果合併(conquer)，如此便解決了原先的問題。     
+Divide：把數列「對半拆解」成兩個小數列。        
+Conquer：按照「由小到大」的順序，「合併」小數列。          
+[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-merge-sorthe-bing-pai-xu-fa.html)       
