@@ -35,12 +35,14 @@ class solution():
             heap[y + 1] = temp
 
             solution().adjust(heap, 1, y)
+        
+        del heap[0]
+        
         return heap
 
 
 
 heap = solution().heapsort([3,2,-4,6,4,2,19])
-del heap[0]
 
 print( heap )
 
