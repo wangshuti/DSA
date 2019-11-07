@@ -7,10 +7,10 @@ merge sort：通過對陣列進行分割在合併的過程來進行排序。
 定義上除了都是排序的演算法外，並無相同之處。
 
                                    merge sort                    heap sort
-average time              O(n logn)                      O(n logn)
-Best time                    O(n logn)                      O(n logn)
-Worst time                  O(n logn)                      O(n logn)
-Extra Space(in-place)   O(n)                             O(l)
-Stability                        Stable                          Unstable
+average time                       O(n logn)                     O(n logn)
+Best time                          O(n logn)                     O(n logn)
+Worst time                         O(n logn)                     O(n logn)
+Extra Space(in-place)                 O(n)                          O(l)
+Stability                           Stable                       Unstable
 
 參考資料：老師PPT
