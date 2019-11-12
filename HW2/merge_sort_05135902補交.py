@@ -37,6 +37,8 @@ print(merge)
 
 
 # In[ ]:
+#參考資料https://medium.com/appworks-school/初學者學演算法-排序法進階-合併排序法-6252651c6f7e
+#參考資料http://alrightchiu.github.io/SecondRound/comparison-sort-merge-sorthe-bing-pai-xu-fa.html
 
 
 
