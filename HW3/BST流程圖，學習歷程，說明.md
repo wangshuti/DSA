@@ -9,5 +9,16 @@
 雖然沒有一下子就完成程式碼，但大的框架出來，後面進行debug發現許多是小細節的問題。程式的邏輯沒有問題。             
           
 ## 新增功能
+![image](https://github.com/wangshuti/DSA/blob/master/image/insert手.jpg)
 
 ## 查詢功能
+![image](https://github.com/wangshuti/DSA/blob/master/image/搜尋.jpg)         
+            
+查詢功能與新增功能都很好理解          
+這次作業的難點是刪除和修改        
+
+## 刪除功能
+分為三種情況討論：           
+1.所刪除的值沒有子節點        
+2.所刪除的值只有一個左或右子節點        
+3.所刪除的值有兩個子節點        
