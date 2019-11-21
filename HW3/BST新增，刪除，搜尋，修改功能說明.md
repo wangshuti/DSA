@@ -9,25 +9,23 @@
 3.把s所指节点插入到右子树中。（新插入节点总是叶子节点）         
 
 ## 刪除delete        
-注意：採取最小變動的原則！！！        
-可歸納為三種情況：刪除撒旦，弗利扎，西魯          
-1.刪除撒旦（995）            
+注意：採取最小變動的原則！！！                  
+1.刪除23                     
 若刪去值p為最下層子節點，則它無子樹。刪除不會破壞整個樹的結構，修改雙親節點的指針即可                 
-![image](https://github.com/wangshuti/DSA/blob/master/image/delete1.png)                 
-2.刪除弗利扎（79）                  
+![image](https://github.com/wangshuti/DSA/blob/master/image/d1.JPG)                 
+2.刪除41                  
 若p節點只有左子樹（PL）或右子樹（PR)，此時只要令PL或PR直接成為其母樹的節點的子樹就可           
-![image](https://github.com/wangshuti/DSA/blob/master/image/delete2.png)                         
-3.刪除西魯（666）         
-若p左子樹與右子樹均不為空，在刪p之後，要保持最小變動，則較為複雜        
-![image](https://github.com/wangshuti/DSA/blob/master/image/delete3.png)                      
-由於西魯有兩個child，若直接刪除西魯的資料，要牽動的node較多。變通的祕訣就是「找替身」。           
-原本要刪西魯，但是實際上是釋放西魯的「Successor(達爾)」的記憶體位置(或是「Predecessor(16號)」的記憶體位置)，最後再把「Successor(達爾)」(或是「Predecessor(16號)」)的資料放回到西魯的記憶體位置上，又因為BST的特徵，所有「具有兩個child」的node的Successor或是Predecessor一定是leaf node或是只有一個child，如此，便回到如同撒旦與弗力札「至多只有一個child」的情境。                        
-稍微驗證一下「具有兩個child的node的Successor或是Predecessor一定是leaf node或是只有一個child」，若某個node有兩個child：        
-Successor找的是「right subtree中Key最小的node」；            
-Predecessor找的是「left subtree中Key最大的node」；                
-因此Successor和Predecessor必定不會同時也有兩個child                  
-現欲刪除西魯，就去找西魯的Successor(達爾)當做替身，因為達爾沒有child，其刪除方法便如同上述刪除撒旦的方法                
-![image](https://github.com/wangshuti/DSA/blob/master/image/delete4.png) 
+![image](https://github.com/wangshuti/DSA/blob/master/image/d2.JPG)                         
+3.刪除12         
+若p左子樹與右子樹均不為空，在刪p之後，要保持最小變動，則較為複雜               
+此時就需要找p的Successor和Predecessor            
+補充：               
+Successor(S)找的是「right subtree中Key最小的node」；            
+Predecessor(P)找的是「left subtree中Key最大的node」；                
+因此Successor和Predecessor必定不會同時也有兩個child                                 
+![image](https://github.com/wangshuti/DSA/blob/master/image/d3.JPG)         
+現在想要刪除12，S為23，P為4。所以在這種情況下，用23或4將12替換即可不改變樹原本的結構。        
+但因要求更動最少，因此選擇23.         
 
 ## 查詢search                          
 會有兩種情況：                  
