@@ -6,7 +6,8 @@
 我先完成了關於BST新增，刪除，搜尋，修改功能說明的作業。在網上搜尋資料來幫助自己理解。             
 然後再進行手繪流程圖。各個功能的流程圖確定無誤後才開始撰寫程式。          
 在撰寫程式之前按老師說的回顧了一下之前的linkedlist和binary tree的程式碼。在這兩個基礎上程式碼好寫很多。         
-雖然沒有一下子就完成程式碼，但大的框架出來，後面進行debug發現許多是小細節的問題。程式的邏輯沒有問題。             
+雖然沒有一下子就完成程式碼，但大的框架出來，後面進行debug發現許多是小細節的問題。程式的邏輯沒有問題。 
+——[linkedlist basic code](https://github.com/wangshuti/DSA/blob/master/week2/Linkedlist_note.py)
           
 ## 新增功能
 ![image](https://github.com/wangshuti/DSA/blob/master/image/insert手.jpg)
@@ -28,3 +29,8 @@
 網絡上查不到資料，自行理解！          
 我的理解：先搜尋到想要修改的值，執行定義好的delete函數，再insert想改後的值！         
 ![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg)
+        
+參考資料（僅參考概念）       
+http://alrightchiu.github.io/SecondRound/binary-search-tree-introjian-jie.html        
+http://alrightchiu.github.io/SecondRound/binary-search-tree-searchsou-xun-zi-liao-insertxin-zeng-zi-liao.html        
+http://alrightchiu.github.io/SecondRound/binary-search-tree-sortpai-xu-deleteshan-chu-zi-liao.html          
