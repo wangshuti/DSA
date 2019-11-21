@@ -49,4 +49,9 @@ Predecessor找的是「left subtree中Key最大的node」；
 此處修改要求全部替換，且可以更換root。需保證原來的樹高要大於等於修改後的樹高！        
 我自己的理解則是：刪去需要修改的值，而新增修改後的值！ 
 範例：          
-![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg) 
+![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg)        
+           
+參考資料：          
+http://alrightchiu.github.io/SecondRound/binary-search-tree-introjian-jie.html              
+http://alrightchiu.github.io/SecondRound/binary-search-tree-searchsou-xun-zi-liao-insertxin-zeng-zi-liao.html         
+http://alrightchiu.github.io/SecondRound/binary-search-tree-sortpai-xu-deleteshan-chu-zi-liao.html 
