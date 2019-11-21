@@ -22,3 +22,9 @@
 1.所刪除的值沒有子節點        
 2.所刪除的值只有一個左或右子節點        
 3.所刪除的值有兩個子節點        
+![image](https://github.com/wangshuti/DSA/blob/master/image/刪除.jpg)           
+           
+## 修改功能           
+網絡上查不到資料，自行理解！          
+我的理解：先搜尋到想要修改的值，執行定義好的delete函數，再insert想改後的值！         
+![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg)
