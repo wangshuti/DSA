@@ -151,3 +151,8 @@ class Solution():
             self.printTree(root.left)
             self.printTree(root.right)
             print(root.val, end = ' ')
+
+#參考資料（僅參考概念，程式碼原創）
+#http://alrightchiu.github.io/SecondRound/binary-search-tree-introjian-jie.html
+#http://alrightchiu.github.io/SecondRound/binary-search-tree-searchsou-xun-zi-liao-insertxin-zeng-zi-liao.html
+#http://alrightchiu.github.io/SecondRound/binary-search-tree-sortpai-xu-deleteshan-chu-zi-liao.html
