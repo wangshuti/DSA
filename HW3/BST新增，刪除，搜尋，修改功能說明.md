@@ -116,7 +116,7 @@ def search(self, root, target):
 範例：          
 ![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg)        
 ```Python
-def count(self, root, val):         #先算一下有多少個重複的值需要改
+   def count(self, root, val):     #計算是否想要修改的數有重複的函數
         if root == None:
             return 0
         if root.val == val:
@@ -126,6 +126,34 @@ def count(self, root, val):         #先算一下有多少個重複的值需要�
         if val > root.val:
             return self.count(root.right, val)
 
+    def getDepth(self, root):                    #計算樹的深度
+        depth = 0
+        if root == None:
+            return depth
+        left = self.getDepth(root.left)
+        right = self.getDepth(root.right)
+        return max(left, right) + 1
+
+    def helper(self, A, s, e):                         #定義如果需變更節點的函數
+        root = None
+        if s < e:
+            mid = (s + e) >> 1
+            root = TreeNode(A[mid])                      #選擇中間值為節點，使樹兩邊平均
+            root.left = self.helper(A, s, mid - 1)
+            root.right = self.helper(A, mid + 1, e)
+        elif s == e:
+            root = TreeNode(A[s])
+        return root
+
+    def sortList(self, root):
+        rtn = []
+        if root == None:
+            return rtn
+        a = self.sortList(root.left)
+        b = self.sortList(root.right)
+        return a + [root.val] + b
+
+
     def modify(self, root, val, new_val):
         """
         :type root: TreeNode
@@ -133,14 +161,23 @@ def count(self, root, val):         #先算一下有多少個重複的值需要�
         :type new_val: int
         :rtype: None Do not return anything, modify nodes(maybe more than more) in-place instead.(cannot search())
         """
-        cnt = self.count(root, val)       #先算出有多少個重複的需要修改
-        node = self.delete(root, val)     #然後刪除所以需要修改的值
+        cnt = self.count(root, val)     #想修改的值有多少個
+        oldDepth = self.getDepth(root)  #原樹高
+
+        node = self.delete(root, val)   #刪除想要修改的值
         while node and cnt:
-            self.insert(node, new_val)    #然後再新增修改後的值
+            self.insert(node, new_val)  #insert新的值
             cnt -= 1
-        return node
+        newDepth = self.getDepth(node)
+        if newDepth > oldDepth:               #如果新樹比舊樹高，調整
+            lst = self.sortList(node)
+            if lst is None or len(lst) == 0:
+                return None
+            res = self.helper(lst, 0, len(lst) - 1)
+            return res
+        else:                                 #否則直接回傳                    
+            return node
 ``` 
- 
 參考資料：          
 http://alrightchiu.github.io/SecondRound/binary-search-tree-introjian-jie.html              
 http://alrightchiu.github.io/SecondRound/binary-search-tree-searchsou-xun-zi-liao-insertxin-zeng-zi-liao.html         
