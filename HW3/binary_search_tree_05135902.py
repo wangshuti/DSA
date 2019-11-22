@@ -84,6 +84,34 @@ class Solution():
         if val > root.val:
             return self.count(root.right, val)
 
+    def getDepth(self, root):
+        depth = 0
+        if root == None:
+            return depth
+        left = self.getDepth(root.left)
+        right = self.getDepth(root.right)
+        return max(left, right) + 1
+
+    def helper(self, A, s, e):
+        root = None
+        if s < e:
+            mid = (s + e) >> 1
+            root = TreeNode(A[mid])
+            root.left = self.helper(A, s, mid - 1)
+            root.right = self.helper(A, mid + 1, e)
+        elif s == e:
+            root = TreeNode(A[s])
+        return root
+
+    def sortList(self, root):
+        rtn = []
+        if root == None:
+            return rtn
+        a = self.sortList(root.left)
+        b = self.sortList(root.right)
+        return a + [root.val] + b
+
+
     def modify(self, root, val, new_val):
         """
         :type root: TreeNode
@@ -92,11 +120,21 @@ class Solution():
         :rtype: None Do not return anything, modify nodes(maybe more than more) in-place instead.(cannot search())
         """
         cnt = self.count(root, val)
+        oldDepth = self.getDepth(root)
+
         node = self.delete(root, val)
         while node and cnt:
             self.insert(node, new_val)
             cnt -= 1
-        return node
+        newDepth = self.getDepth(node)
+        if newDepth > oldDepth:
+            lst = self.sortList(node)
+            if lst is None or len(lst) == 0:
+                return None
+            res = self.helper(lst, 0, len(lst) - 1)
+            return res
+        else:
+            return node
 
     def printTree(self, root, order='pre'):
         if root == None:
@@ -113,8 +151,3 @@ class Solution():
             self.printTree(root.left)
             self.printTree(root.right)
             print(root.val, end = ' ')
-
-#參考資料（僅參考概念，程式碼原創）
-#http://alrightchiu.github.io/SecondRound/binary-search-tree-introjian-jie.html 
-#http://alrightchiu.github.io/SecondRound/binary-search-tree-searchsou-xun-zi-liao-insertxin-zeng-zi-liao.html
-#http://alrightchiu.github.io/SecondRound/binary-search-tree-sortpai-xu-deleteshan-chu-zi-liao.html
