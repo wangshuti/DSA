@@ -13,7 +13,25 @@
 ——[linkedlist basic code](https://github.com/wangshuti/DSA/blob/master/week2/Linkedlist_note.py)
           
 ## 新增功能
-![image](https://github.com/wangshuti/DSA/blob/master/image/insert手.jpg)
+![image](https://github.com/wangshuti/DSA/blob/master/image/insert手.jpg)          
+           
+def insert(self, root, val):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode(inserted node)
+        """
+        if root == None:
+            root = TreeNode(val)
+        elif val == root.val:
+            nn = TreeNode(val)
+            nn.left = root.left
+            root.left = nn
+        elif val < root.val:
+            root.left = self.insert(root.left, val)
+        elif val > root.val:
+            root.right = self.insert(root.right, val)
+        return root
 
 ## 查詢功能
 ![image](https://github.com/wangshuti/DSA/blob/master/image/搜尋.jpg)         
