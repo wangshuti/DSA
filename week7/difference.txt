@@ -1,0 +1,16 @@
+heap sort：通過heap來實現sort，是關於二元樹的概念。
+先將輸入的list轉成max heap的格式，再在heap裡進行位置互換最後成功sort
+
+merge sort：通過對陣列進行分割在合併的過程來進行排序。
+把問題先拆解(divide)成子問題，並在逐一處理子問題後，將子問題的結果合併(conquer)，如此便解決了原先的問題。
+
+定義上除了都是排序的演算法外，並無相同之處。
+
+                                   merge sort                    heap sort
+average time              O(n logn)                      O(n logn)
+Best time                    O(n logn)                      O(n logn)
+Worst time                  O(n logn)                      O(n logn)
+Extra Space(in-place)   O(n)                             O(l)
+Stability                        Stable                          Unstable
+
+參考資料：老師PPT
