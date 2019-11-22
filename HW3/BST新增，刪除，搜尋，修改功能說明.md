@@ -7,6 +7,25 @@
 1.若一開始是空树，则将傳進來的值s作为根节点(root)插入，否则：           
 2.若s小于等於binary search tree的根节点之值，则把s所指节点插入到左子树中，否则：           
 3.把s所指节点插入到右子树中。（新插入节点总是叶子节点）         
+```Python           
+def insert(self, root, val):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode(inserted node)
+        """
+        if root == None:
+            root = TreeNode(val)     #如果為空就變成root
+        elif val == root.val:
+            nn = TreeNode(val)
+            nn.left = root.left      #等於放左邊
+            root.left = nn
+        elif val < root.val:
+            root.left = self.insert(root.left, val)      #小於也放左邊，往左走
+        elif val > root.val:
+            root.right = self.insert(root.right, val)    #大於放右邊，往右走
+        return root
+```
 
 ## 刪除delete        
 注意：採取最小變動的原則！！！                  
@@ -26,6 +45,38 @@ Predecessor(P)找的是「left subtree中Key最大的node」；
 ![image](https://github.com/wangshuti/DSA/blob/master/image/d3.JPG)         
 現在想要刪除12，S為23，P為4。所以在這種情況下，用23或4將12替換即可不改變樹原本的結構。        
 但因要求更動最少，因此選擇23.         
+```Python
+ def findMin(self, root):          #找尋最小值的函數，delete時需要用到
+        if root.left:
+            return self.findMin(root.left)
+        else:
+            return root
+            
+    def delete(self, root, val):
+        """
+        :type root: TreeNode
+        :type target: int
+        :rtype: None Do not return anything, delete nodes(maybe more than more) instead.(cannot search())
+        """
+        if root == None:
+            return
+        if val < root.val:
+            root.left = self.delete(root.left, val)
+        elif val > root.val:
+            root.right = self.delete(root.right, val)
+        else:
+            if root.left and root.right:                     #想刪除的值有兩個子節點，及左右都有
+                temp = self.findMin(root.right)              #因此找到右子樹中最小的值，與想要刪除的值進行替換
+                root.val = temp.val
+                root.right = self.delete(root.right, temp.val)
+            elif root.right == None and root.left == None:        #沒有子節點，直接刪除
+                root = None
+            elif root.right == None:                   #只有左節點，直接連parent
+                root = self.delete(root.left,val)
+            elif root.left == None:                    #只有右節點，直接連parent
+                root = root.right
+        return root
+``` 
 
 ## 查詢search                          
 會有兩種情況：                  
@@ -42,13 +93,54 @@ Predecessor(P)找的是「left subtree中Key最大的node」；
 ![image](https://github.com/wangshuti/DSA/blob/master/image/s4.png)                  
 此時，Current的Key(627)與傳送進Search()的KEY(627)相同，便確認Current即為基紐隊長，於是跳出while迴圈，並傳回Current。        
 宣告搜尋成功。        
+``` Python
+def search(self, root, target):
+        """
+        :type root: TreeNode
+        :type target: int
+        :rtype: TreeNode(searched node)
+        """
+        if root == None:         #如果樹為空，就直接回傳
+            return root
+        if root.val == target:     #如果想找的值為root，回傳
+            return root
+        elif target < root.val:     
+            return self.search(root.left, target)      #如果想找的值比root小，則往左走
+        elif target > root.val:
+            return self.search(root.right, target)     #如果想找的值比root大，則往右走
+```
 
 ## 修改modify      
 此處修改要求全部替換，且可以更換root。需保證原來的樹高要大於等於修改後的樹高！        
 我自己的理解則是：刪去需要修改的值，而新增修改後的值！ 
 範例：          
 ![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg)        
-           
+```Python
+def count(self, root, val):         #先算一下有多少個重複的值需要改
+        if root == None:
+            return 0
+        if root.val == val:
+            return 1 + self.count(root.left, val)
+        if val < root.val:
+            return self.count(root.left, val)
+        if val > root.val:
+            return self.count(root.right, val)
+
+    def modify(self, root, val, new_val):
+        """
+        :type root: TreeNode
+        :type target: int
+        :type new_val: int
+        :rtype: None Do not return anything, modify nodes(maybe more than more) in-place instead.(cannot search())
+        """
+        cnt = self.count(root, val)       #先算出有多少個重複的需要修改
+        node = self.delete(root, val)     #然後刪除所以需要修改的值
+        while node and cnt:
+            self.insert(node, new_val)    #然後再新增修改後的值
+            cnt -= 1
+        return node
+``` 
+ 
 參考資料：          
 http://alrightchiu.github.io/SecondRound/binary-search-tree-introjian-jie.html              
 http://alrightchiu.github.io/SecondRound/binary-search-tree-searchsou-xun-zi-liao-insertxin-zeng-zi-liao.html         
