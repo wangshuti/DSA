@@ -95,7 +95,32 @@ def search(self, root, target):
 ## 修改功能           
 網絡上查不到資料，自行理解！          
 我的理解：先搜尋到想要修改的值，執行定義好的delete函數，再insert想改後的值！         
-![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg)
+![image](https://github.com/wangshuti/DSA/blob/master/image/modify.jpg)      
+```Python
+def count(self, root, val):
+        if root == None:
+            return 0
+        if root.val == val:
+            return 1 + self.count(root.left, val)
+        if val < root.val:
+            return self.count(root.left, val)
+        if val > root.val:
+            return self.count(root.right, val)
+
+    def modify(self, root, val, new_val):
+        """
+        :type root: TreeNode
+        :type target: int
+        :type new_val: int
+        :rtype: None Do not return anything, modify nodes(maybe more than more) in-place instead.(cannot search())
+        """
+        cnt = self.count(root, val)
+        node = self.delete(root, val)
+        while node and cnt:
+            self.insert(node, new_val)
+            cnt -= 1
+        return node
+```       
         
 參考資料（僅參考概念）       
 http://alrightchiu.github.io/SecondRound/binary-search-tree-introjian-jie.html        
