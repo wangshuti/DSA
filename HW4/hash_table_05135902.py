@@ -4,24 +4,13 @@ class ListNode:
     def __init__(self, val):
         self.val = val
         self.next = None
-        """
-        :type val: int
-        :type next: ListNode
-        :rtype: None
-        """
+        
 class MyHashSet:
     def __init__(self, capacity = 5):
         self.capacity = capacity
         self.data = [None] * capacity
-        """
-        :type capacity: int
-        :rtype: None
-        """
+        
     def add(self, key):
-        """
-        :type key: int
-        :rtype: None
-        """
         if not self.contains(key):
             [key_str, key_int, idx] = self.genMD5(key)
             #print(key_int)
@@ -34,11 +23,7 @@ class MyHashSet:
                     node = node.next
                 node.next = ListNode(key_int)
 
-    def remove(self, key):
-        """
-        :type key: int
-        :rtype: None
-        """
+    def remove(self, key):       
         if self.contains(key):
             [key_str, key_int, idx] = self.genMD5(key)
             if self.data[idx].val == key_int:
@@ -54,11 +39,7 @@ class MyHashSet:
                         p = node
                         node = node.next
 
-    def contains(self, key):
-        """
-        :type key: int
-        :rtype: bool(True or False)
-        """
+    def contains(self, key):        
         [key_str, key_int, idx] = self.genMD5(key)
         if self.data[idx] == None:
             return False
