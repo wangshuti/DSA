@@ -116,6 +116,13 @@ h(71)=71 mod 6=5
 **4.建立公共溢出区**            
 这种方法的基本思想是：将哈希表分为基本表和溢出表两部分，凡是和基本表发生冲突的元素，一律填入溢出表。           
                
+## 流程圖     
+### Add
+![image](https://github.com/wangshuti/DSA/blob/master/week11/image/add.png)
+### Contain
+![image](https://github.com/wangshuti/DSA/blob/master/week11/image/contain.png)
+### Remove
+![image](https://github.com/wangshuti/DSA/blob/master/week11/image/remove.png)
 ## Code and Learning
 ```Python
 from Crypto.Hash import MD5
