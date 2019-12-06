@@ -198,6 +198,7 @@ class MyHashSet:
                 node = node.next
 ```               
 Refernences:      
+僅參考概念，程式碼原創             
 http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html           
 https://blog.csdn.net/tanggao1314/article/details/51457585         
 https://zhuanlan.zhihu.com/p/29520044
