@@ -76,12 +76,29 @@ d. 上一层继续做如上操作，知道所有顶点都访问过。
 1.在DFS中，使用**佇列**儲存節點，而在BFS中，使用**棧**儲存節點。原因就在於二者優先次序的不同。        
 >佇列是一種先進先出的資料結構，對於每一個節點而言，每一次搜尋，都是優先這一個節點的子節點，所以每一次加入等待序列之後，都要等到某一個節點的所有子節點都被訪問完畢， 才可以進行下一個節點的訪問，這正好是，先進入等待序列 的節點，先出序列進行計算，而後進入的，則後出，所以使用佇列儲存。           
                
->棧是一種先進後出的資料結構，在DFS中，我們要對每一條路徑走到底，才可以回溯前驅節點，所以當節點加入等待序列之後，都要先讓後加入的（也就是子節點中的某一個） 節點先進行運算， 以保證是一條路走到底，所以符合棧的設計。             
-
-
-          
+>棧是一種先進後出的資料結構，在DFS中，我們要對每一條路徑走到底，才可以回溯前驅節點，所以當節點加入等待序列之後，都要先讓後加入的（也就是子節點中的某一個） 節點先進行運算， 以保證是一條路走到底，所以符合棧的設計。        
+                      
+2.在搜尋的執行方式上，BFS和DFS也存在差異                
+>BFS像是，一个人迷路，但是他有技能（分身术）它遇到分叉路口，不是选一个走，而是分身多个人都试试，比如有A、B、C三个分叉路口，它A路走一步，紧接着B路也走一步，然后C路也赶紧走一步，步伐整齐统一，直到所有的路走过了。            
+            
+>DFS則是，一个人迷路，遇到很多分叉路口，他只有一个人，并且想走出去，所以只能一个个尝试，一条道路走到黑，发现到头了，然后再拐回去走刚才这条路的其他分叉路口，最后发现这条路的所有分叉路口走完了，选择另外一条路继续以上操作，直到所有的路都走过了。            
+            
+3.所使用的記憶體容量
+>BFS is going to use more memory depending on the branching factor... however, BFS is a complete algorithm... meaning if you are using it to search for something in the lowest depth possible, BFS will give you the optimal solution. BFS space complexity is  O(b^d) ... the branching factor raised to the depth (can be A LOT of memory).        
+             
+>DFS on the other hand, is much better about space however it may find a suboptimal solution. Meaning, if you are just searching for a path from one vertex to another, you may find the suboptimal solution (and stop there) before you find the real shortest path. DFS space complexity is  O(|V|) ... meaning that the most memory it can take up is the longest possible path.                   
+                
+4. According to tree, they depends on the structure of the search tree          
+>1.If you know a solution is not far from the root of the tree, a breadth first search (BFS) might be better.            
+2.If the tree is very deep and solutions are rare, depth first search (DFS) might take an extremely long time, but BFS could be faster.     
+3.If the tree is very wide, a BFS might need too much memory, so it might be completely impractical.          
+4.If solutions are frequent but located deep in the tree, BFS could be impractical.         
+5.If the search tree is very deep you will need to restrict the search depth for depth first search (DFS), anyway (for example with iterative deepening).          
+           
 ## References
-http://alrightchiu.github.io/SecondRound/graph-introjian-jie.html       
-https://en.wikipedia.org/wiki/Breadth-first_search           
-https://en.wikipedia.org/wiki/Depth-first_search
-https://www.jianshu.com/p/70952b51f0c8 
+http://alrightchiu.github.io/SecondRound/graph-introjian-jie.html             
+https://en.wikipedia.org/wiki/Breadth-first_search                    
+https://en.wikipedia.org/wiki/Depth-first_search           
+https://www.jianshu.com/p/70952b51f0c8           
+https://www.zhihu.com/question/28549888/answer/41231930           
+https://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-depth-first-search-dfs-vs-breadth-first-search-bf          
