@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*- 
+from collections import defaultdict
+#Created on Tue Dec 17 2019
+#BFS
+from queue import Queue
+vist =list(0 for _ in range(100))
+lujing =list()
+class Graph:   
+    def __init__(self):
+        self.graph=defaultdict(list)        
+    def addEdge(self,u,v):
+        self.graph[u].append(v)
+    def BFS(self,s):
+        que = Queue(maxsize=0)
+        que.put(s)
+        vist[s]=1;
+        while not que.empty():
+            frontw = que.get()
+            lujing.append(frontw)
+            k=len(self.graph[frontw])
+            for i in range(k):
+                if(vist[self.graph[frontw][i]]==0):
+                    vist[self.graph[frontw][i]]=1
+                    que.put(self.graph[frontw][i])        
+        return lujing
+
+if __name__ == '__main__':
+
+    g = Graph()
+    print("初始化成功")
+    g.addEdge(0,1)
+    g.addEdge(0,2)
+    g.addEdge(1,2)
+    g.addEdge(2,0)
+    g.addEdge(2,3)
+    g.addEdge(3,3)
+    print(g.BFS(2))
