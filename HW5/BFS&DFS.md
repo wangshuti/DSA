@@ -73,10 +73,12 @@ d. 上一层继续做如上操作，知道所有顶点都访问过。
 从顶点4开始访问，并终止于顶点4                           
             
 ## BFS vs. DFS
-This non-recursive implementation is similar to the non-recursive implementation of depth-first search, but differs from it in two ways:
-           
->1.it uses a **queue (First In First Out)** instead of a **stack** and          
-2.it checks whether a vertex has been discovered before enqueueing the vertex rather than delaying this check until the vertex is dequeued from the queue.       
+1.在DFS中，使用**佇列**儲存節點，而在BFS中，使用**棧**儲存節點。原因就在於二者優先次序的不同。        
+>佇列是一種先進先出的資料結構，對於每一個節點而言，每一次搜尋，都是優先這一個節點的子節點，所以每一次加入等待序列之後，都要等到某一個節點的所有子節點都被訪問完畢， 才可以進行下一個節點的訪問，這正好是，先進入等待序列 的節點，先出序列進行計算，而後進入的，則後出，所以使用佇列儲存。           
+               
+>棧是一種先進後出的資料結構，在DFS中，我們要對每一條路徑走到底，才可以回溯前驅節點，所以當節點加入等待序列之後，都要先讓後加入的（也就是子節點中的某一個） 節點先進行運算， 以保證是一條路走到底，所以符合棧的設計。             
+
+
           
 ## References
 http://alrightchiu.github.io/SecondRound/graph-introjian-jie.html       
