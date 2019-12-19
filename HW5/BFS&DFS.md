@@ -61,15 +61,15 @@ d. 上一层继续做如上操作，知道所有顶点都访问过。
 ### 流程圖
 从顶点1开始做深度搜索：
 初始状态，从顶点1开始           
-![image]https://github.com/wangshuti/DSA/blob/master/week12/DFS1.JPG
+![image](https://github.com/wangshuti/DSA/blob/master/week12/DFS1.JPG)
 依次访问过顶点1,2,3后，终止于顶点3         
-![image]https://github.com/wangshuti/DSA/blob/master/week12/DFS2.JPG
+![image](https://github.com/wangshuti/DSA/blob/master/week12/DFS2.JPG)
 从顶点3回溯到顶点2，继续访问顶点5，并且终止于顶点5        
-![image]https://github.com/wangshuti/DSA/blob/master/week12/DFS3.JPG
+![image](https://github.com/wangshuti/DSA/blob/master/week12/DFS3.JPG)
 从顶点5回溯到顶点2，并且终止于顶点2         
-![image]https://github.com/wangshuti/DSA/blob/master/week12/DFS4.JPG
+![image](https://github.com/wangshuti/DSA/blob/master/week12/DFS4.JPG)
 从顶点2回溯到顶点1，并终止于顶点1         
-![image]https://github.com/wangshuti/DSA/blob/master/week12/DFS5.JPG
+![image](https://github.com/wangshuti/DSA/blob/master/week12/DFS5.JPG)
 从顶点4开始访问，并终止于顶点4                           
             
 ## BFS vs. DFS
