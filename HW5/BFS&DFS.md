@@ -42,7 +42,25 @@ d. 按照同样的方法处理队列中的下一个结点。
 访问3的邻接结点，3出队，队列={4}          
 ![image](https://github.com/wangshuti/DSA/blob/master/week12/image/BFS5.JPG)         
 访问4的邻接结点，4出队，队列={ 空}, 结点5对于1来说不可达。         
-           
+```Python
+    def BFS(self, s):
+        search_queue = deque()
+        search_queue += self.graph[s]
+
+        path = []          #建立path以記錄待訪尋的頂點
+        searched = []      #建立searched以記錄已訪尋的頂點
+
+        path.append(s)     #將起始頂點加入path
+        searched.append(s) #將起始點加入searched
+
+        while search_queue:
+            current_node = search_queue.popleft()
+            if not current_node in searched:                #如果目前的node不在searched裡面
+                path.append(current_node)                   #將current node加入path
+                searched.append(current_node)               #也加入searched
+                search_queue += self.graph[current_node]
+        return path
+```           
 ## DFS-深度優先搜尋          
 ### Definiton
 Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.          
