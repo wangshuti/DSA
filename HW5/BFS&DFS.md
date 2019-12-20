@@ -42,6 +42,8 @@ d. 按照同样的方法处理队列中的下一个结点。
 访问3的邻接结点，3出队，队列={4}          
 ![image](https://github.com/wangshuti/DSA/blob/master/week12/image/BFS5.JPG)         
 访问4的邻接结点，4出队，队列={ 空}, 结点5对于1来说不可达。         
+           
+### Code        
 ```Python
     def BFS(self, s):
         search_queue = deque()
@@ -54,13 +56,14 @@ d. 按照同样的方法处理队列中的下一个结点。
         searched.append(s) #將起始點加入searched
 
         while search_queue:
-            current_node = search_queue.popleft()
+            current_node = search_queue.popleft()           #current node =依照queue先進先出的特性移除的第一個元素
             if not current_node in searched:                #如果目前的node不在searched裡面
                 path.append(current_node)                   #將current node加入path
                 searched.append(current_node)               #也加入searched
                 search_queue += self.graph[current_node]
         return path
 ```           
+            
 ## DFS-深度優先搜尋          
 ### Definiton
 Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.          
@@ -88,8 +91,29 @@ d. 上一层继续做如上操作，知道所有顶点都访问过。
 ![image](https://github.com/wangshuti/DSA/blob/master/week13/image/DFS4.JPG)           
 从顶点2回溯到顶点1，并终止于顶点1         
 ![image](https://github.com/wangshuti/DSA/blob/master/week13/image/DFS5.JPG)          
-从顶点4开始访问，并终止于顶点4                           
-            
+从顶点4开始访问，并终止于顶点4                    
+               
+### Code         
+```Python
+    def DFS(self, s):
+        search_stack = deque()
+        search_stack += self.graph[s]
+
+        path = []           #建立path以記錄待訪尋的頂點
+        searched = []       #建立searched以記錄待訪尋的頂點
+
+        path.append(s)      #將起始頂點加入path
+        searched.append(s)  #將起始頂點加入searched
+
+        while search_stack:
+            current_node = search_stack.pop()        #current node =依照queue先進先出的特性移除的第一個元素
+            if not current_node in searched:         #如果目前的node不在searched裡面
+                path.append(current_node)            #將current node加入path
+                searched.append(current_node)        #也加入searched
+                search_stack += self.graph[current_node]
+        return path
+```
+           
 ## BFS vs. DFS
 1.在DFS中，使用**佇列**儲存節點，而在BFS中，使用**棧**儲存節點。原因就在於二者優先次序的不同。        
 >佇列是一種先進先出的資料結構，對於每一個節點而言，每一次搜尋，都是優先這一個節點的子節點，所以每一次加入等待序列之後，都要等到某一個節點的所有子節點都被訪問完畢， 才可以進行下一個節點的訪問，這正好是，先進入等待序列 的節點，先出序列進行計算，而後進入的，則後出，所以使用佇列儲存。           
