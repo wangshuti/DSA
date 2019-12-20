@@ -46,3 +46,11 @@ class Graph:
 
     def show(self):
         print(list(self.graph.items()))
+
+#References（程式碼自創，僅參考概念）
+#http://alrightchiu.github.io/SecondRound/graph-introjian-jie.html
+#https://en.wikipedia.org/wiki/Breadth-first_search
+#https://en.wikipedia.org/wiki/Depth-first_search
+#https://www.jianshu.com/p/70952b51f0c8
+#https://www.zhihu.com/question/28549888/answer/41231930
+#https://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-depth-first-search-dfs-vs-breadth-first-search-bf
