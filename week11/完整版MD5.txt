@@ -1,0 +1,90 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*- 
+import hashlib
+import binascii
+import hashlib
+"""
+Created on Wed Nov 27 2019
+MD5&hash_table
+"""
+class MyHashSet:
+    def __init__(self, size=9999):
+        self.hash_list = [list() for i in range(size)]  # 使用list数据结构作为哈希表元素保存方法
+        self.size = size # 最大表长
+
+    def hash_x(self, key):
+        m = hashlib.md5()
+        b = key.encode(encoding='utf-8')
+        m.update(b)
+        str_md5 = m.hexdigest()
+        string2 = bytes(str_md5, encoding='utf-8')
+        string_int2 = int(binascii.b2a_hex(string2), 16)
+        return string_int2 % self.size  # 散列函数采用除留余数法        
+
+    def add(self, key):
+        """插入关键字到哈希表内"""
+        address = self.hash_x(key)  # 求散列地址
+        while self.hash_list[address]:  # 当前位置已经有数据了，发生冲突。
+            address = (address + 1) % self.size  # 线性探测下一地址是否可用
+        self.words=key
+        am = hashlib.md5()
+        ab = self.words.encode(encoding='utf-8')
+        am.update(ab)
+        str_md51 = am.hexdigest()
+        self.hash_list[address] = str_md51  # 没有冲突则直接保存。
+ #       print("加密存储")
+#        return True
+
+    def contains(self, key):
+        """查找关键字，返回布尔值"""
+        star = address = self.hash_x(key)
+        self.words2=key
+        am1 = hashlib.md5()
+        ab1 = self.words2.encode(encoding='utf-8')
+        am1.update(ab1)
+        str_md512 = am1.hexdigest()
+        while self.hash_list[address] != str_md512:
+            address = (address + 1) % self.size
+            if not self.hash_list[address] or address == star:  # 说明没找到或者循环到了开始的位置
+                return False
+        return True
+
+    def remove(self, key):
+        """查找关键字，返回布尔值"""
+        star = address = self.hash_x(key)
+#        print(address)
+        self.words3=key
+        am2 = hashlib.md5()
+        ab2 = self.words3.encode(encoding='utf-8')
+        am2.update(ab2)
+        str_md513 = am2.hexdigest()
+#        print(str_md513)
+        while self.hash_list[address] != str_md513:
+            address = (address + 1) % self.size
+            if not self.hash_list[address] or address == star:  # 说明没找到或者循环到了开始的位置
+                return False
+        self.hash_list[address]=""
+        return True
+
+
+if __name__ == '__main__':
+
+    hashSet=MyHashSet()
+    print("初始化成功")
+#    outcome= hashSet.hash_x("dog")
+#    print("上述的存储地址")
+    hashSet.add("dog")
+    hashSet.add("pig")
+    outcome=hashSet.contains("dog")
+    print(outcome)
+    outcome=hashSet.contains("pig")
+    print(outcome)
+    outcome= hashSet.contains("cat")
+    print(outcome)
+    hashSet.add("bird")
+    outcome=hashSet.contains("bird")
+    print(outcome)
+    hashSet.remove("pig")
+    outcome= hashSet.contains("pig")
+    print(outcome)
+
