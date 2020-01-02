@@ -19,6 +19,12 @@
 總時間複雜度為 O(ElogE) 。<br>
 如果兩點之間有多條邊，預先以 Graph Traversal 掃描一次所有邊，保留權重最小的邊，仍可求得正確答案。兩點之間只剩下一條邊，邊的總數至多 C{V,2} = V(V-1)/2 條。時間複雜度 O(ElogE) 可以改寫成 O(ElogV²) = O(2ElogV) = O(ElogV) 。<br>
 <br>
+## 流程圖<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k1.JPG)<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k2.JPG)<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k3.JPG)<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k4.JPG)<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k5.JPG)<br>
 # Dijkstra<br>
 是shortest path的運用<br>
 ## Path<br>
