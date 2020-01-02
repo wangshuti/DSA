@@ -14,7 +14,7 @@ The median is 2.0<br>
 題目是求兩個數組的中位數。我的做法就是將兩個數組合併起來，然後sort。<br>
 如果長度是偶數，則中間兩個相加除2，如果是奇數，就直接是中間值。<br>
 <br>
-## 88.Merge Sorted Array<br>
+##  88.Merge Sorted Array<br>
 難度：easy<br>
 >Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.<br>
 Note:<br>
@@ -30,7 +30,7 @@ merge sort的作業寫出來，這題就可以。<br>
 跟作業一樣，我運用的是外部空間法。設立一個空的list。原有的兩個list兩兩比較，小的丟進新的list。<br>
 最後將所求的nums1等於新的list，就完成了<br>
 <br>
-## 108.Convert Sorted Array to Binary Search Tree<br>
+##  108.Convert Sorted Array to Binary Search Tree<br>
 難度：easy<br>
 >Given an array where elements are sorted in ascending order, convert it to a height balanced BST.<br>
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.<br>
@@ -47,7 +47,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 但因為是已經排序好的array，所以要做的就是就是將array分開，中間點作為root，然後按照BST的結構放好即可<br>
 比作業簡單多了~<br>
  <br>
- ## 109.Convert Sorted List to Binary Search Tree <br>
+ ##  109.Convert Sorted List to Binary Search Tree <br>
  難度：Medium <br>
  >Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST. <br>
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1. <br>
@@ -63,7 +63,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 這題是108的進階版，從array變成了linked list。  <br>
 後半部分做法與108一樣。只需前半部分一個個走訪linked list，並將值丟入一個新的array即可。  <br>
 <br>
-## 902.Sort an Array<br>
+##  902.Sort an Array<br>
 難度：Medium<br>
 >Given an array of integers nums, sort the array in ascending order.<br>
 >>Example 1:<br>
