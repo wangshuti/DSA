@@ -37,11 +37,11 @@ For this problem, a height-balanced binary tree is defined as a binary tree in w
 >>Example:<br>
 Given the sorted array: [-10,-3,0,5,9],<br>
 One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:<br>
-      0<br>
-     / \<br>
-   -3   9<br>
-   /   /<br>
- -10  5<br>
+      0 <br>
+     / \ <br>
+   -3   9 <br>
+   /   / <br>
+ -10  5 <br>
  <br>
 這題是將array轉換為BST，BST一直是我頭疼的地方<br>
 但因為是已經排序好的array，所以要做的就是就是將array分開，中間點作為root，然後按照BST的結構放好即可<br>
