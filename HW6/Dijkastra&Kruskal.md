@@ -52,7 +52,14 @@
 （4）從T中選取一個其距離值為最小的頂點W，加入S<br>
 （5）對T中頂點的距離值進行修改：若加進W作中間頂點，從V0到Vi的距離值比不加W的路徑要短，則修改此距離值<br>
 （6）重複上述步驟，直到S中包含所有頂點，即S=V為止<br>
-
+## 流程圖<br>
+以上面的例子做說明 ( - 代表無限大 ; D[i]: 1至 i的距離 ; P[i]: 至 i的上一個結點）<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week15/image/d1.JPG)<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week15/image/d2.JPG)<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week15/image/d3.JPG)<br>
+![image](https://github.com/wangshuti/DSA/blob/master/week15/image/d4.JPG)<br>
+所以終端機1~終端機7的最短路徑花費為16<br>
+路徑為 1 → 2 → 3 → 6 → 5 → 7 (back trace)<br>
 # Reference
 http://www.csie.ntnu.edu.tw/~u91029/SpanningTree.html<br>
 http://www.csie.ntnu.edu.tw/~u91029/Path.html<br>
