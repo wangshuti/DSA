@@ -59,7 +59,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
    -3   9 <br>
    /   / <br>
  -10  5 <br>
-  <br>
+ <br>
 這題是108的進階版，從array變成了linked list。  <br>
 後半部分做法與108一樣。只需前半部分一個個走訪linked list，並將值丟入一個新的array即可。  <br>
 <br>
