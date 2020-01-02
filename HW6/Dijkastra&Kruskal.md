@@ -1,22 +1,18 @@
 # Kruskal<br>
 是minimum spanning tree的運用<br>
-<br>
 ## 生成樹<br>             
 （1）定義：所有頂點均由邊連線在一起，但不存在迴路的圖叫該圖的生成樹<br>
 （2）深度優先生成樹與廣度優先生成樹<br>
 （3）一個圖可以有許多棵不同的生成樹，所有生成樹具有以下共同特點：<br>
 >生成樹的頂點個數與圖的頂點個數相同<br>
-生成樹是圖的極小連通子圖<br>
-<br>             
+生成樹是圖的極小連通子圖<br>          
 ## 最小生成樹<br>    
 生成樹的每條邊上的權值之和最小。<br>
-<br>
 ## Definiton<br>
 設連通網N=(V,{E})，令最小生成樹<br>
 （1）初始狀態為只有n個頂點而無邊的非連通圖T=(V,{NULL})，每個頂點自成一個連通分量<br>
 （2）在E中選取代價最小的邊，若該邊依附的頂點落在T中不同的連通分量上，則將此邊加入到T中；否則，捨去此邊，選取下一條代價最小的邊<br>
 （3）依此類推，直至T中所有頂點都在同一連通分量上為止<br>
-<br>
 ## 時間複雜度<br>
 一、排序圖上所有邊。 O(ElogE) 。<br>
 二、連結 MSS ，採用「 Disjoint-set Forest 」。 O(Eα(E,V)) 。<br>
@@ -52,5 +48,5 @@
 （6）重複上述步驟，直到S中包含所有頂點，即S=V為止<br>
 
 # Reference
-http://www.csie.ntnu.edu.tw/~u91029/SpanningTree.html
-http://www.csie.ntnu.edu.tw/~u91029/Path.html
+http://www.csie.ntnu.edu.tw/~u91029/SpanningTree.html<br>
+http://www.csie.ntnu.edu.tw/~u91029/Path.html<br>
