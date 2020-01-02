@@ -63,3 +63,4 @@
 # Reference
 http://www.csie.ntnu.edu.tw/~u91029/SpanningTree.html<br>
 http://www.csie.ntnu.edu.tw/~u91029/Path.html<br>
+http://dreamisadream97.pixnet.net/blog/post/168577620-dijkstra%E6%BC%94%E7%AE%97%E6%B3%95
