@@ -95,3 +95,8 @@ class Graph():
         for [u, v, w] in mst_edges:
             ret[str(u)+'-'+str(v)] = w
         return ret
+    
+#References（僅參考概念，程式碼原創）
+#http://www.csie.ntnu.edu.tw/~u91029/SpanningTree.html
+#http://www.csie.ntnu.edu.tw/~u91029/Path.html
+#http://dreamisadream97.pixnet.net/blog/post/168577620-dijkstra%E6%BC%94%E7%AE%97%E6%B3%95
