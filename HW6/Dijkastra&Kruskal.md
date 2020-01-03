@@ -25,6 +25,60 @@
 ![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k3.JPG)<br>
 ![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k4.JPG)<br>
 ![image](https://github.com/wangshuti/DSA/blob/master/week14/image/k5.JPG)<br>
+### Code<br>
+```Python
+    def Dijkstra(self, s):
+        """
+        :type s: int
+        :rtype: dict
+        """
+        visited = []
+        distance = {s: 0}
+        node = list(range(self.V))
+        if s in node:
+            node.remove(s)
+            visited.append(s)
+        else:
+            return None
+
+        for i in node:
+            distance[i] = self.graph[s][i]
+        prefer = s
+        while node:
+            _distance = float('inf')
+            for i in visited:
+                for j in node:
+                    if self.graph[i][j] > 0:
+                        if _distance > distance[i] + self.graph[i][j]:
+                            _distance = distance[j] = distance[i] + self.graph[i][j]
+                            prefer = j
+            visited.append(prefer)
+            node.remove(prefer)
+
+        ret = {}
+        for i in range(self.V):
+            ret[str(i)] = distance[i]
+        return ret
+
+    def find(self, x, pres):
+        root, p = x, x
+        while root != pres[root]:
+            root = pres[root]
+
+        while p != pres[p]:
+            p, pres[p] = pres[p], root
+        return root
+
+    def join(self, x, y, pres, ranks):
+        h1, h2 = self.find(x, pres), self.find(y, pres)
+        if h1 != h2:
+            if ranks[h1] < ranks[h2]:
+                pres[h1] = h2
+            else:
+                pres[h2] = h1
+                if ranks[h1] == ranks[h2]:
+                    ranks[h1] += 1
+```                    
 # Dijkstra<br>
 是shortest path的運用<br>
 ## Path<br>
@@ -60,6 +114,30 @@
 ![image](https://github.com/wangshuti/DSA/blob/master/week15/image/d4.JPG)<br>
 所以終端機1~終端機7的最短路徑花費為16<br>
 路徑為 1 → 2 → 3 → 6 → 5 → 7 (back trace)<br>
+### Code
+```Python
+    def Kruskal(self):
+        """
+        :rtype: dict
+        """
+        n = self.V
+        pres, ranks = [e for e in range(n)], [0] * n
+        edges = sorted(self.graph, key=lambda x: x[-1])
+        mst_edges, num = [], 0
+        for edge in edges:
+            if self.find(edge[0], pres) != self.find(edge[1], pres):
+                mst_edges.append(edge)
+                self.join(edge[0], edge[1], pres, ranks)
+                num += 1
+            else:
+                continue
+            if num == n:
+                break
+        ret = {}
+        for [u, v, w] in mst_edges:
+            ret[str(u)+'-'+str(v)] = w
+        return ret
+```        
 # Reference
 http://www.csie.ntnu.edu.tw/~u91029/SpanningTree.html<br>
 http://www.csie.ntnu.edu.tw/~u91029/Path.html<br>
