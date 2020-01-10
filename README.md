@@ -57,18 +57,18 @@ Quick Sort是一種「把大問題分成小問題處理」的Divide and Conquer�
            
 ![image](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort.png)          
           
-[quick sort_code](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort_code.py)    
+[quick sort_code](https://github.com/wangshuti/DSA/blob/master/HW1/quick_sort_05135902.py)    
 -quick sort 基礎實作code，運用額外空間法       
 [quick sort_code(2)](https://github.com/wangshuti/DSA/blob/master/week5/quick%20sort_code(2).py)        
 -quick sort 方法二：in place法     
 
-### 第一次作業
+## [HW1](https://github.com/wangshuti/DSA/tree/master/HW1)
 [流程圖](https://github.com/wangshuti/DSA/blob/master/week5/quick_sort流程圖.jpg)         
 -使用draw io畫出來的流程圖，在最後結尾的地方仍存在不妥，正努力解決               
-[作業實作](https://nbviewer.jupyter.org/github/wangshuti/DSA/blob/master/week5/HW_quicksort.ipynb)        
+[作業實作](https://github.com/wangshuti/DSA/blob/master/HW1/quicksort%E5%AD%B8%E7%BF%92%E6%AD%B7%E7%A8%8B.ipynb)        
 -老師要求作業之jupyter notebook格式，因github經常loading不出來，所以放的網頁模式！                         
 
-## week6        
+## [week6](https://github.com/wangshuti/DSA/tree/master/week6)        
 ### heap sort         
 Binary Heap有兩項基本特徵：       
 特徵一：Binary Heap之結構可以視作Complete Binary Tree。         
@@ -77,18 +77,27 @@ Max Heap：在每一個subtree中，root之「數值」要比兩個child之「�
 Min Heap：在每一個subtree中，root之「數值」要比兩個child之「數值」還要小       
 [補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-heap-sortdui-ji-pai-xu-fa.html)       
 
-## week7
+## [week7](https://github.com/wangshuti/DSA/tree/master/week7)
 ### merge sort
 Merge Sort屬於Divide and Conquer演算法，把問題先拆解(divide)成子問題，並在逐一處理子問題後，將子問題的結果合併(conquer)，如此便解決了原先的問題。     
 Divide：把數列「對半拆解」成兩個小數列。        
 Conquer：按照「由小到大」的順序，「合併」小數列。          
-[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-merge-sorthe-bing-pai-xu-fa.html)            
+[補充資料](http://alrightchiu.github.io/SecondRound/comparison-sort-merge-sorthe-bing-pai-xu-fa.html)
+
+## [HW2](https://github.com/wangshuti/DSA/tree/master/HW2)
+-[Heap sort vs. Merge sort](https://github.com/wangshuti/DSA/blob/master/HW2/difference.txt)
+### 作業實作    
+[merge sort](https://github.com/wangshuti/DSA/blob/master/HW2/merge_sort_05135902.py)     
+[學習歷程](https://github.com/wangshuti/DSA/blob/master/HW2/mergesort%E8%A7%A3%E9%87%8B.ipynb)      
+[heap sort](https://github.com/wangshuti/DSA/blob/master/HW2/mergesort%E8%A7%A3%E9%87%8B.ipynb)       
+[學習歷程](https://github.com/wangshuti/DSA/blob/master/HW2/heap_sort%E8%A7%A3%E9%87%8B.ipynb)      
 
 ## week8        
 ### Binary Tree        
          
 ## week9       
-### Binary Serach Tree       
+### Binary Serach Tree     
+
 
 ## [week10](https://github.com/wangshuti/DSA/tree/master/week10)                
 ### Red Black Tree         
